@@ -36,6 +36,7 @@
 
 - name: Ensure composer directory exists.
   file:
+    become: yes
     path: "{{ composer_home_path }}"
     owner: "{{ composer_home_owner }}"
     group: "{{ composer_home_group }}"
