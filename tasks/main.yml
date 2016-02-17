@@ -35,8 +35,8 @@
   when: composer_keep_updated
 
 - name: Ensure composer directory exists.
+  become: yes
   file:
-    become: yes
     path: "{{ composer_home_path }}"
     owner: "{{ composer_home_owner }}"
     group: "{{ composer_home_group }}"
